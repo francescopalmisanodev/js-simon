@@ -5,8 +5,8 @@ container.addEventListener("click", function() {
         numbers.push(randomNumber(100));
     }
     container.innerHTML=numbers;
-    setTimeout(function (numbers) {
-    
+    setTimeout(function () {
+        container.innerHTML="che numeri c'erano?";
         const rightGuesses = [];
         for (let i = 0; i<numbers.length; i++) {
             let guess = prompt("inserisci numero")
@@ -16,7 +16,7 @@ container.addEventListener("click", function() {
             
         }
         container.innerHTML=`hai indovinato ${rightGuesses.length} numeri: ${rightGuesses}`;
-    }, 30000);
+    }, 3000);
 })
 
 
