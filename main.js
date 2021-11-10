@@ -1,8 +1,12 @@
 const container = document.querySelector(".container");
 container.addEventListener("click", function() {
     const numbers=[];
+    let number=0;
     for (let i=0; i<5; i++){
-        numbers.push(randomNumber(100));
+        do {
+            number=randomNumber(100);
+        } while (numbers.includes(number));
+        numbers.push(number);
     }
     container.innerHTML=numbers;
     setTimeout(function () {
